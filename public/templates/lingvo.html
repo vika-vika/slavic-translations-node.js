@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Translation">
+
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Slavic Languages Comparision">
+  <meta name="keywords" content="Slavic Languages, Russia, Soundex">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title> Slavic Languages Comparision </title>
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Bootstrap Material Design -->
+  <link href="../stylesheets/docs.min.css" rel="stylesheet">
+  <link href="../stylesheets/main.css" rel="stylesheet">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <!-- load jquery -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <!-- load angular -->
+
+  <script src="../js/core.js"></script>
+
+</head>
+
+
+<body class="bd-docs" ng-controller="mainController">
+  <div class="container">
+
+    <div class="bd-pageheader bd-pageheader--no-bottom">
+      <div class="container">
+
+        <h1>Slavic Languages Comparision</h1>
+        <p class="lead">
+          Translations, Levenshtein distance, Soundex, Methathron
+        </p>
+      </div>
+    </div>
+
+    <div class="container card-container">
+      <h1 class="bd-title" id="content"></a>Translations</h1>
+
+      <p>Please enter text in Russian in order to get translations and comparision with other slavic languages</p>
+
+      <div class="bd-callout bd-callout-info">
+        <p><strong>Supported languages: </strong> Russian, Ukrainian, Belorussian, Polish, Czech, Bulgarian, Serbian, Slovak, Croatian, Bosnian, Macedonian, Slovenian </p>
+      </div>
+
+      <div class="bd-callout bd-callout-danger">
+        As Google Translate API uses English as a pivot or intermediate language to translate word for word, that make sense to perform a request in english in order to avoid double translation errors.
+      </div>
+
+      <!-- RU, UA, BY, PL, CZ, BG, RS, SK, HR, BA, MK, ME-->
+      <div class="input-group input-width">
+        <input type="text" class="form-control" placeholder="Enter word..." style="transition:none!important;" ng-model="inputQuery">
+        <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" ng-click="translate()">Compare!</button>
+      </span>
+      </div>
+
+      <!-- #dee1f4  d1d5ef -->
+
+      <div ng-style="translationTableResultsStyle">
+
+        <translation-form data="originalTranslations"></translation-form>
+
+        <div class="blockquote-content">
+          <p class="content-content"> Content</p>
+          <p class="content-menu-item"> <a href="#transliteration">Transliteration</a></p>
+          <p class="content-menu-item"> <a href="#levenstein">Levenstein distance</a></p>
+          <p class="content-menu-item"><a href="#soundex">Soundex</a></p>
+        </div>
+
+        <h2> <a name="transliteration">Transliteration </a></h2>
+
+        <translation-form data="originalTranslations" type="translit"></translation-form>
+
+
+        <h2 name="levenstein"> Levenstein distance </h2>
+        <h2 name="soundex"> Soundex </h2>
+
+      </div>
+
+    </div>
+
+
+  </div>
+  </div>
+</body>
+
+</html>

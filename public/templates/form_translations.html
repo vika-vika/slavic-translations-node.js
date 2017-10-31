@@ -1,0 +1,41 @@
+
+<div>
+  <div class="row m-t-3 m-x-0 row-padding">
+      <div class="col-lg-3 col-md-4 col-sm-12 column-info">
+          <div class="p-y-2 col-header">
+              <span class=" m-x-auto text-secondary"><strong> East Slavic branch {{type}}</strong></span>
+          </div>
+          <table class="table-full-width">
+              <tr ng-repeat="item in data.east" >
+                  <td class="col-info-name-lang color-text-grey ">{{item.target}}</td>
+                  <td class="col-info-value"> {{ type == "translit" ? item.tr : item.value}}
+                    </td>
+              </tr>
+          </table>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 column-info">
+          <div class="p-y-2 col-header">
+              <span class=" m-x-auto text-secondary"><strong> West Slavic branch</strong></span>
+          </div>
+          <table class="table-full-width" style="border-collapse: collapse;">
+              <tr ng-repeat="item in data.west" >
+                  <td class="col-info-name-lang color-text-grey ">{{item.target}}</td>
+                  <td class="col-info-value">{{ type == "translit" ? item.tr : item.value}}</td>
+              </tr>
+          </table>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 column-info">
+          <div class="p-y-2 col-header">
+              <span class=" m-x-auto text-secondary"><strong> South Slavic branch</strong></span>
+          </div>
+
+          <table class="table-full-width">
+              <tr>
+              <tr ng-repeat="item in data.south" >
+                  <td class="col-info-name-lang color-text-grey ">{{item.target}}</td>
+                  <td class="col-info-value">{{ type == "translit" ? item.tr : item.value}}</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>

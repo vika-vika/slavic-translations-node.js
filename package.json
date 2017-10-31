@@ -1,0 +1,28 @@
+{
+  "name": "lingvo",
+  "version": "1.0.0",
+  "description": "..",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "vnnz",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/translate": "^1.0.0",
+    "async-p": "^1.1.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "jade": "^1.11.0",
+    "transliteration": "^1.6.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
