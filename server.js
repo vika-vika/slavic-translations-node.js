@@ -3,21 +3,6 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-// Imports the Google Cloud client library
-const Translate = require('@google-cloud/translate');
-
-var translation = require('./server/translate');
-
-// Your Google Cloud Platform project ID
-const projectId = 'lingvo-174213';
-// Your Google Cloud Platform project Key
-const key = 'AIzaSyAECAJxcwHs0GSvOXt3_WG5_1_GoeaDjQo';
-
-// Instantiates a client
-const translateClient = Translate({
-    key: key
-});
-
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function (request, response) {
