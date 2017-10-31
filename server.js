@@ -2,6 +2,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var translation = require('./server/translate');
 
 app.set('port', (process.env.PORT || 5000));
 
