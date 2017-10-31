@@ -1,0 +1,7 @@
+To run the app:
+
+1. npm install gulp -m
+
+2. npm start
+3. gulp watch 
+..running on 3000
